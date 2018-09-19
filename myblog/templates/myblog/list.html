@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日志列表</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    th{
+        background-color:green;
+    }
+</style>
+<body>
+<h1>文章列表页面</h1>
+<form id="historyDataForm" class="well well-small form-inline m-b-10" action="location/10000204100454/history-data" method="post">
+    <label>开始时间</label>
+    <input class="input-medium Wdate" id="start-time" type="text" name="startTime" onfocus="var endTime=$dp.$('end-time');WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',onpicked:function(){endTime.focus();},maxDate:'#F{$dp.$D(\'end-time\')}'})" value="2018-07-10 00:00:00">
+    <label>结束时间</label>
+    <input class="input-medium Wdate" id="end-time" type="text" name="endTime" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss', minDate:'#F{$dp.$D(\'start-time\')}', maxDate:'%y-%M-{%d} 23:59:59'})" value="2018-07-10 23:59:59">
+    <button class="btn" id="submitBtn" type="button">查询</button>
+
+</form>
+<table class="table table-bordered table-striped table-hover table-center m-t-20">
+    <caption>文章列表</caption>
+    <thead>
+        <tr>
+            <th>日志</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for log in logs %}
+
+        <tr>
+            <td>{{ log }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

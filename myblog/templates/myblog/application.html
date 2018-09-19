@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>标题</title>
+    {% block css %} {% endblock %}
+    <!--[if lt IE 9]>
+    <script src="{% static 'vendor/html5shiv.min-3.7.3.js' %}"></script>
+    <script src="{% static 'vendor/respond.min-1.4.2.js' %}"></script>
+  <![endif]-->
+    <!-- FontAwesome Styles-->
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.css' %}" />
+    <!-- Morris Chart Styles-->
+    <link rel="stylesheet" href="{% static 'assets/js/morris/morris-0.4.3.min.css' %}" />
+    <!-- Custom Styles-->
+    <link rel="stylesheet" href="{% static 'assets/css/custom-styles.css' %}" />
+    <!-- Google Fonts-->
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans' />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="shortcut icon" sizes="96x96" href="{% static 'image/favicon.ico' %}">
+</head>
+
+<body>
+
+
+
+    <div id="wrapper">
+        {% include "./nav.html" %} {% block content %} {% endblock %}
+    </div>
+
+
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="{% static 'assets/js/jquery-3.3.1.js' %}"></script>
+    <!-- Bootstrap Js -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!-- Metis Menu Js -->
+    <script src="{% static 'assets/js/jquery.metisMenu.js' %}"></script>
+    <!-- Morris Chart Js -->
+    <script src="{% static 'assets/js/morris/raphael-2.1.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/morris/morris.js' %}"></script>
+    <script src="{% static 'assets/js/easypiechart.js' %}"></script>
+    <script src="{% static 'assets/js/easypiechart-data.js' %}"></script>
+    <!-- Custom Js -->
+    <script src="{% static 'assets/js/custom-scripts.js' %}"></script>
+     {% block js %} {% endblock %}
+</body>
+
+</html>

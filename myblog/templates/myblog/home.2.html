@@ -1,0 +1,84 @@
+{% load static %}
+{% extends "application.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- Bootstrap Styles-->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- FontAwesome Styles-->
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.css' %}" />
+    <!-- Morris Chart Styles-->
+    <link rel="stylesheet" href="{% static 'assets/js/morris/morris-0.4.3.min.css' %}" />
+    <!-- Custom Styles-->
+    <link rel="stylesheet" href="{% static 'assets/css/custom-styles.css' %}" />
+    <!-- Google Fonts-->
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans' />
+</head>
+<style>
+</style>
+
+<body>
+    <div id="wrapper">
+        {% extends "nav.html" %}
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div id="sideNav" href=""><i class="fa fa-caret-right"></i></div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <a class="active-menu" href="{% url 'myblog:home' %}"><i class="fa fa-dashboard"></i>主页</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'myblog:basic_setting' %}"><i class="fa fa-desktop"></i> 基本设置</a>
+                    </li>
+                    <li>
+                        <a href="chart.html"><i class="fa fa-bar-chart-o"></i>上报设置</a>
+                    </li>
+                    <li>
+                        <a href="tab-panel.html"><i class="fa fa-qrcode"></i> 烟气参数</a>
+                    </li>
+
+                    <li>
+                        <a href="table.html"><i class="fa fa-table"></i> 监测设备</a>
+                    </li>
+                    <li>
+                        <a href="form.html"><i class="fa fa-edit"></i> RS485设置 </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            Dashboard <small>Summary of your App</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Library</a></li>
+                            <li class="active">Data</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <footer>
+            <p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank"
+                    title="模板之家">西安元智</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">西安元智</a></p>
+        </footer>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+
+
+</body>
+
+</html>

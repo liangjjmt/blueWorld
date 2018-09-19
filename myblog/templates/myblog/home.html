@@ -1,0 +1,45 @@
+
+{% extends "./application.html" %}
+
+{% block css %} 
+{% load static %}
+<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+{% endblock %}
+{% block content %} 
+
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            Dashboard <small>Summary of your App</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Library</a></li>
+                            <li class="active">Data</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <footer>
+            <p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank"
+                    title="模板之家">西安元智</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">西安元智</a></p>
+        </footer>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+{% endblock %}
+{% block js %} 
+<script src="{% static 'assets/js/custom_comm.js' %}"></script>
+<script>
+    $(function () {
+        changeSideBarColor(0);
+    })
+        
+</script>
+{% endblock %}
